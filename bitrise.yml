@@ -1,0 +1,13 @@
+format_version: 2
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  setup:
+    steps:
+    # NG: tap を使用して install をすることはできない
+    # - brew-install:
+    #     inputs:
+    #     - content: golangci/tap/golangci-lint
+    - script:
+        inputs:
+        - content: brew install golangci/tap/golangci-lint
